@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'spectralbold';
+  src: url('../fonts/spectral-bold-webfont.woff2') format('woff2'),
+       url('../fonts/spectral-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'barlow_semi_condensed_lightRg';
+  src: url('../fonts/barlowsemicondensed-light-webfont.woff2') format('woff2'),
+       url('../fonts/barlowsemicondensed-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'barlow_semi_condensedregular';
+  src: url('../fonts/barlowsemicondensed-regular-webfont.woff2') format('woff2'),
+       url('../fonts/barlowsemicondensed-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'barlow_semi_condensed_semibRg';
+  src: url('../fonts/barlowsemicondensed-semibold-webfont.woff2') format('woff2'),
+       url('../fonts/barlowsemicondensed-semibold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+$font-serif: 'spectralbold', serif;
+$font-sans: 'barlow_semi_condensedregular', sans-serif;
+$font-sans-light: 'barlow_semi_condensed_lightRg', sans-serif;
+$font-sans-semibold: 'barlow_semi_condensed_semibRg', sans-serif;
+
+
+
+html {
+  font-size: 1rem;
+
+}
+
+/** @include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.2rem;
+  }
+} **/
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, .h1, h2, .h2, h4, .h4, h5, .h5, h6, .h6, p {
+  margin-bottom: 20px;
+  color: $heading-color;
+  font-family: $font-serif;
+}
+
+h3, .h3, h6, .h6 {
+  font-family: $font-sans;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+p {
+  color: $body-color;
+  font-family: $font-sans;
+}
+
+.lead {
+  color: $heading-color;
+}
+
+.page-title {
+  font-size: 5rem;
+  line-height: 5.5rem;
+  margin-bottom: 0;
+}
+
+p:last-of-type {
+  margin-bottom: 0;
+}
+
+
+ul, ol {
+  font-family: $font-sans;
+}
+
+hr {
+  &.short {
+    height: 3px;
+    width: 70px;
+    background: $primary;
+    border: none;
+  }
+}
+
+
+  .stripe--horizontal{
+    height:18px;
+    width:100px;
+    position:relative;
+    margin: 1rem 0;
+  
+    .line{
+      background-color:$primary;
+      position:absolute;
+      width:100%;
+    }
+
+    .line--1{
+      top:0;
+      height:2px;
+    }
+
+    .line--2{
+      height:6px;
+      top:50%;
+      transform:translateY(-50%)
+    }
+
+    .line--3{
+      height:2px;
+      bottom:0;
+    }
+  }
