@@ -16954,7 +16954,7 @@ h1, .h1, h2, .h2, h4, .h4, h5, .h5, h6, .h6, p {
   color: #002A54;
   font-family: "spectralbold", serif; }
 
-h3, .h3, h6, .h6 {
+h3, .h3, h6, .h6, h5, .h5 {
   font-family: "barlow_semi_condensedregular", sans-serif;
   font-weight: 700;
   text-transform: uppercase; }
@@ -17364,28 +17364,14 @@ hr.short {
 
 .feature-tile {
   position: relative; }
-  .feature-tile * {
-    color: #fff; }
-  .feature-tile--square {
-    padding-bottom: 100%;
-    height: 0; }
-  .feature-tile--landscape {
-    padding-bottom: 56.25%;
-    height: 0; }
-  .feature-tile--portrait {
-    padding-bottom: 156.25%;
-    height: 0; }
+  .feature-tile__header {
+    color: #fff;
+    background-color: #002A54;
+    padding: 1rem; }
   .feature-tile__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 3; }
-  .feature-tile:hover .background-image-holder {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1); }
+    color: #002A54;
+    background-color: #fff;
+    padding: 1rem; }
 
 body {
   background: #343a40; }
