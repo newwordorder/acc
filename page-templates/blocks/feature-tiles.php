@@ -20,7 +20,7 @@ if( get_row_layout() == 'feature_tiles' ):
         <div class="col-md-<?php echo $columns; ?> ">
             <div class="feature-tile ">
                 <div class="feature-tile__header">
-                  <?php echo $title ?>
+                  <h6><?php echo $title ?></h6>
                 </div>
                 <div class="feature-tile__content">
                   <?php echo $text ?>

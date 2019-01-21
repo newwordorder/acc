@@ -17363,15 +17363,86 @@ hr.short {
     width: 70px; }
 
 .feature-tile {
-  position: relative; }
-  .feature-tile__header {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+  .feature-tile__header * {
     color: #fff;
     background-color: #002A54;
-    padding: 1rem; }
+    padding: 1rem;
+    margin-bottom: 0; }
   .feature-tile__content {
     color: #002A54;
     background-color: #fff;
-    padding: 1rem; }
+    padding: 1rem;
+    height: 100%; }
+
+.people-tile {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%; }
+  .people-tile * {
+    -webkit-transition: 300ms;
+    transition: 300ms; }
+  .people-tile__header {
+    height: 30%;
+    background-color: #eeeeee; }
+    .people-tile__header h6 {
+      color: #002A54;
+      padding: 1rem 1rem 0rem 1rem;
+      margin-bottom: 0; }
+    .people-tile__header p {
+      color: #002A54;
+      padding: 0.25rem 1rem 1rem 1rem;
+      margin-bottom: 0; }
+  .people-tile__image {
+    position: relative;
+    width: 100%;
+    height: 16rem;
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%); }
+  .people-tile:hover {
+    cursor: pointer; }
+    .people-tile:hover .people-tile__header {
+      background-color: #002A54; }
+      .people-tile:hover .people-tile__header h6 {
+        color: #fff;
+        padding: 1rem 1rem 0rem 1rem;
+        margin-bottom: 0; }
+      .people-tile:hover .people-tile__header p {
+        color: #fff;
+        padding: 0.25rem 1rem 1rem 1rem;
+        margin-bottom: 0; }
+    .people-tile:hover .people-tile__image {
+      -webkit-filter: grayscale(0%);
+      /* Safari 6.0 - 9.0 */
+      filter: grayscale(0%); }
+
+.people-modal__image {
+  width: 100%;
+  position: relative; }
+
+.people-modal__text {
+  padding: 2rem; }
+
+.modal-content .btn,
+.modal-content .wpcf7 input[type=submit], .wpcf7 .modal-content input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0; }
 
 body {
   background: #343a40; }
@@ -17483,20 +17554,20 @@ section.bg-effect--ken-burns {
   text-transform: uppercase;
   color: #002A54;
   padding: 0.8em 1.6em;
-  border-radius: 2em; }
+  border-radius: 0; }
   .btn--solid {
     background: #002A54;
-    color: #fff; }
+    color: #fff !important; }
     .btn--solid:hover {
-      background: #001121;
-      color: #fff; }
+      background: #004487;
+      color: #fff !important; }
   .btn--outline {
     background: transparent;
     color: #002A54;
     border: 1px solid #002A54; }
     .btn--outline:hover {
       background: #002A54;
-      color: #fff; }
+      color: #fff !important; }
   .btn--link {
     background: transparent;
     color: #002A54; }
@@ -17621,7 +17692,9 @@ section.bg-effect--ken-burns {
   overflow: hidden;
   max-width: 100%; }
 
-.embed-container iframe, .embed-container object, .embed-container embed {
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
   position: absolute;
   top: 0;
   left: 0;
@@ -17746,13 +17819,15 @@ section.bg-effect--ken-burns {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%); }
-  .stripe .line--1, .stripe .line--3 {
+  .stripe .line--1,
+  .stripe .line--3 {
     width: 2px; }
 
 .dotted-lines {
   width: 100%;
   height: 100%;
   position: absolute;
+  pointer-events: none;
   top: 0; }
   .dotted-lines .line {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(33%, black), color-stop(0%, rgba(255, 255, 255, 0)));
@@ -17778,6 +17853,36 @@ section.bg-effect--ken-burns {
     left: calc(60% + 18rem); }
   .dotted-lines .line--6 {
     left: calc(60% + 22rem); }
+
+li {
+  margin-left: 1em; }
+
+.contact__page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.contact__left {
+  width: 60%; }
+
+.contact__right {
+  width: 30%;
+  padding: 8rem 1rem 0rem 1rem;
+  background-color: #eee; }
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form textarea {
+  border: none;
+  margin-top: 0.25rem;
+  border-radius: 0; }
+  .wpcf7-form input[type="text"]:focus,
+  .wpcf7-form input[type="email"]:focus,
+  .wpcf7-form input[type="tel"]:focus,
+  .wpcf7-form textarea:focus {
+    -webkit-box-shadow: 0 0 0 0.1rem #FFDC00;
+    box-shadow: 1 0 0 0.1rem #FFDC00; }
 
 /*
 * Use existing Bootstrap 4 classes and

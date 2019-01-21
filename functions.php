@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Understrap functions and definitions
  *
@@ -72,3 +73,9 @@ require get_template_directory() . '/inc/editor.php';
 
 require get_template_directory() . '/inc/menus.php';
 require get_template_directory() . '/inc/menulogic.php';
+
+
+/**
+ * FAQ Shortcode
+ */
+require get_template_directory() . '/inc/accordian-shortcode.php';
