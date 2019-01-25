@@ -1,7 +1,7 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
-@import "stack";
-@import "typography";
-@import "sections/sections";
+@import 'stack';
+@import 'typography';
+@import 'sections/sections';
 
 body {
   background: $dark;
@@ -222,10 +222,9 @@ section {
 
 .page-header {
   &--home {
-    padding: 200px 0;
+    padding: 0px 0;
     height: 80vh;
-    max-height: 800px;
-    min-height: 400px;
+    overflow: hidden;
     position: relative;
 
     & .pos-vertical-center {
@@ -544,9 +543,9 @@ li {
 }
 
 .wpcf7-form {
-  & input[type="text"],
-  input[type="email"],
-  input[type="tel"],
+  & input[type='text'],
+  input[type='email'],
+  input[type='tel'],
   textarea {
     border: none;
     margin-top: 0.25rem;
@@ -555,5 +554,19 @@ li {
       -webkit-box-shadow: 0 0 0 0.1rem $accent;
       box-shadow: 1 0 0 0.1rem $accent;
     }
+  }
+}
+
+.accordian-toggle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: $primary;
+  &.collapsed {
+    color: #e6e6e6;
+  }
+  &:hover {
+    color: $primary;
   }
 }

@@ -1,0 +1,63 @@
+.overlapping-column {
+  &:first-child {
+    margin: 15px 0;
+  }
+
+  &:nth-of-type(1) {
+    margin-top: 12rem;
+  }
+
+  &:nth-of-type(3) {
+    margin-top: 16rem;
+    h4,
+    .buttons {
+      width: 40%;
+      margin-left: 60%;
+    }
+  }
+
+  margin: 15px 0;
+
+  margin-left: -18rem;
+  h4 {
+    font-family: $font-sans-light;
+    white-space: pre-line;
+    line-height: 1.2rem;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  .buttons {
+    margin: 0;
+    a {
+      &:after {
+        content: '\f061';
+        font-family: 'Font Awesome 5 Pro';
+        color: $accent;
+        margin-left: 1em;
+        font-size: 1rem;
+        transition: 300ms;
+      }
+      &:hover {
+        &:after {
+          margin-left: 1.5em;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: 30px;
+  }
+
+  &__image,
+  &__icon {
+    margin: 1rem 0px;
+    border-bottom: 6px solid $primary;
+  }
+
+  &__icon {
+    width: 70px;
+  }
+}

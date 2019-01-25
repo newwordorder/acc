@@ -1,10 +1,11 @@
 <?php
+
 /**
-* Template Name: Home
-*
-*
-* @package understrap
-*/
+ * Template Name: Home
+ *
+ *
+ * @package understrap
+ */
 
 get_header();
 
@@ -26,51 +27,67 @@ $fallbackImage = get_field('fallback_image');
 
 <section id="sub-header"
 
-class="page-header page-header--home bg-effect--<?php echo $backgroundEffect ?> imagebg videobg <?php if( $invertColours == 'yes' ): echo 'image--light'; endif; ?>"
+class="page-header page-header--home"
 data-overlay="<?php echo $imageOverlay ?>"
 >
 
-<?php if( $headerType == 'image' ): ?>
+<?php $slides = get_field('texts'); ?>
+      <div class='slider'>
+        <div class="slide__container">
+        <?php while (have_rows('texts')) : the_row();
+        $text = get_sub_field('text');
+        $color = get_sub_field('text_color');
 
-  <?php if( !empty($image) ):
-
-    // vars
-    $url = $image['url'];
-    $alt = $image['alt'];
-
-  ?>
-    <div class="background-image-holder">
-      <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
-    </div>
-  <?php endif; ?>
-<?php endif; ?>
-<?php if( $headerType == 'video' ): ?>
-
-  <div class="youtube-background" data-video-url="<?php echo $video ?>"></div>
-
-  <?php if( !empty($fallbackImage) ):
-
-    // vars
-    $url = $fallbackImage['url'];
-    $alt = $fallbackImage['alt'];
-
-  ?>
-    <div class="background-image-holder">
-      <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
-    </div>
-  <?php endif; ?>
-<?php endif; ?>
-<div class="container pos-vertical-center">
-  <div class="row">
-    <div class="col-md-10">
-      <h1 class="page-title">Australia's<br /> largest vertically integrated beef <br />supply chain</h1>
-    </div>
-  </div>
-</div>
+        ?>
+          <div class="slide <?php echo $color; ?>">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-10">
+              <?php echo $text; ?>
+                   </div>
+                </div>
+            </div>
+          </div>
+          <? endwhile; ?>
+        </div>
+                                                                                              </div>
 
 
 </section>
 
-<?php get_template_part( 'page-templates/blocks' ); ?>
+
+<?php get_template_part('page-templates/blocks'); ?>
+
+<?php 
+
+$images = get_field('images');
+$imageArray = array();
+
+while (have_rows('images')) : the_row();
+$image = get_sub_field('image');
+array_push($imageArray, $image['url']);
+endwhile;
+?>
+
+
+<script>
+
+  var displacement = ['<?php bloginfo('template_directory'); ?>' + '/img/20.jpg'];
+
+  var images = <?php echo json_encode($imageArray); ?>;
+
+  var slide1 = new sliderEffect({
+      parent: document.querySelector('.slider'),
+      intensity: 0.2,
+      images: images,
+      displacements: displacement,
+      slides: document.querySelectorAll('.slide'),
+      hover: false,
+      line: document.querySelector('.line')
+  });
+
+
+</script>
+
 
 <?php get_footer();

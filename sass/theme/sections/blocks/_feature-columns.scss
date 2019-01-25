@@ -1,6 +1,4 @@
-
 .feature-column {
-
   margin: 15px 0;
 
   &--boxed {
@@ -10,7 +8,7 @@
     background-color: #fff;
 
     &__inner {
-      padding:20px;
+      padding: 20px;
     }
 
     .feature-column__image {
@@ -27,9 +25,10 @@
     margin-bottom: 30px;
   }
 
-
-  &__image, &__icon {
+  &__image,
+  &__icon {
     margin-bottom: 30px;
+    border-bottom: 6px solid $primary;
   }
 
   &__icon {

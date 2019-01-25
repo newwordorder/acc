@@ -28,6 +28,8 @@ if (have_rows('blocks')) {
         get_template_part('page-templates/blocks/people-tiles');
         get_template_part('page-templates/blocks/line-break');
         get_template_part('page-templates/blocks/projects');
+        get_template_part('page-templates/blocks/accordian');
+        get_template_part('page-templates/blocks/overlapping-columns');
 
       }
 
