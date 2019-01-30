@@ -297,6 +297,7 @@
   padding: 0px;
   li {
     margin-left: 1rem !important;
+    padding-left: 0rem;
   }
 
   a {
@@ -321,4 +322,14 @@
       }
     }
   }
+}
+
+.header__image {
+  height: 750px;
+  border-left: 6px solid #8ed8f8;
+}
+
+.image-container {
+  position: absolute;
+  top: 120px;
 }

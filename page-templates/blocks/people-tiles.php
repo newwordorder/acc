@@ -4,11 +4,13 @@ if (get_row_layout() == 'people_tiles') :
 
   $spaceBelow = get_sub_field('people_tiles_space_below');
 $columns = get_sub_field('people_tiles_columns_per_row');
-$sectiontitle = get_sub_field('people_tiles_title')
+$sectiontitle = get_sub_field('people_tiles_title');
+$line = get_sub_field('people_tiles_line');
+
 ?>
 
 
-  <?php if (have_rows('people_tiles_column')) : $i = 0;
+  <?php if (have_rows('people_tiles_column')) : $i = rand();
   ?>
     <div class="container space-below--<?php echo $spaceBelow ?>">
       <div class="row">
@@ -37,16 +39,16 @@ $sectiontitle = get_sub_field('people_tiles_title')
               <div class="modal fade" id="<?php echo $i; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                   <div class="modal-content">
-                  <a class="btn btn--outline" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                      </a>  
-                  <div class="d-flex">
-
-                      <div class="people-modal__image">
+                  <a class="btn btn--solid x" data-dismiss="modal" aria-label="Close">
+                  <i class="fas fa-times"></i>                      </a>  
+                  <div class="row">
+                    <div class="col-5">
                         <div class="background-image-holder">
                           <img src="<?php echo $image['url'] ?>"/>
-                        </div>
+
                       </div>
+                      </div>
+                      <div class="col-7">
                       <div class="people-modal__text">
                         <h3><?php echo $name ?></h3>
                         <p class="lead"><?php echo $position ?></p>
@@ -54,6 +56,7 @@ $sectiontitle = get_sub_field('people_tiles_title')
 
                         <p></p>
                       </div>
+</div>
                     </div>
                   </div>
                 </div>
@@ -63,7 +66,7 @@ $sectiontitle = get_sub_field('people_tiles_title')
         endwhile; ?>
       </div>
 
-
+      <?php if ($line) : ?><hr /><?php endif; ?>
     </div>
   <?php endif; ?>
 

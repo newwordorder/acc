@@ -1,73 +1,85 @@
 #footer {
-    background: $primary;
-    padding: 100px 0;
-    position:relative;
+  background: $primary;
+  padding: 100px 0;
+  position: relative;
 
-    .row {
-      margin-bottom: 30px;
-    }
+  .row {
+    margin-bottom: 30px;
+  }
 
-    .col-* {
-      margin-bottom: 30px;
-    }
+  .col-* {
+    margin-bottom: 30px;
+  }
 
-    h1, h2, h3, h4, h5, h6, p {
-        color: #fff;
-        margin-bottom: 0;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #fff;
+    margin-bottom: 0;
+  }
 
-    a, a:visited {
-        color: #fff;
-        opacity: 1;
-        transition: 0.2s;
-    }
-    a:hover, a:active {
-        opacity: 0.6;
-    }
+  h6 {
+    padding-bottom: 1rem;
+  }
 
-    .line{
+  a,
+  a:visited {
+    color: #fff;
+    opacity: 1;
+    transition: 0.2s;
+  }
+  a:hover,
+  a:active {
+    opacity: 0.6;
+  }
 
-    }
+  .line {
+  }
+
+  li {
+    margin-left: 0;
+    padding-left: 0;
+    line-height: 1.5rem !important;
+  }
 }
 
 .footer__logo {
   width: 150px;
 }
 
-
-
-.footer-stripe{
-    z-index: 6 !important;
-    position: absolute !important;
-    top: 0%;
-    opacity:0.1;
-    .line{
-      background-color:#fff !important;
-    }
+.footer-stripe {
+  z-index: 6 !important;
+  position: absolute !important;
+  top: 0%;
+  opacity: 0.1;
+  .line {
+    background-color: #fff !important;
   }
+}
 
+.footer-menu {
+  .menu {
+    .active > .nav-link {
+      color: rgba($dark, 1);
+    }
 
-  .footer-menu{
-        
-    .menu{
-      .active > .nav-link {
-        color: rgba($dark,1);
-      }
-    
-  
     a {
-      color: rgba($dark,.7);
+      color: rgba($dark, 0.7);
       transition: 0.2s;
       padding: 0;
       text-decoration: none;
-  
+
       &:hover {
-        color: rgba($dark,1);
+        color: rgba($dark, 1);
       }
     }
   }
-  }
+}
 
-  .footer-text{
-    font-size:0.875rem;
-  }
+.footer-text {
+  font-size: 0.875rem;
+}

@@ -10,15 +10,26 @@
   &:nth-of-type(3) {
     margin-top: 16rem;
     h4,
-    .buttons {
+    p {
       width: 40%;
       margin-left: 60%;
     }
   }
 
   margin: 15px 0;
-
   margin-left: -18rem;
+
+  @media screen and (max-width: 798px) {
+    margin: 0px;
+    &:nth-of-type(3) {
+      margin-top: 0rem;
+      h4,
+      p {
+        width: 0%;
+        margin-left: 0%;
+      }
+    }
+  }
   h4 {
     font-family: $font-sans-light;
     white-space: pre-line;
@@ -28,21 +39,25 @@
     text-transform: uppercase;
   }
 
-  .buttons {
-    margin: 0;
-    a {
+  p {
+    font-weight: 700;
+    font-family: $font-sans-semibold;
+    text-transform: uppercase;
+    color: $primary;
+    padding: 0.8em 0rem;
+    letter-spacing: 1px;
+
+    &:after {
+      content: '\f061';
+      font-family: 'Font Awesome 5 Pro';
+      color: $accent;
+      margin-left: 1em;
+      font-size: 1rem;
+      transition: 300ms;
+    }
+    &:hover {
       &:after {
-        content: '\f061';
-        font-family: 'Font Awesome 5 Pro';
-        color: $accent;
-        margin-left: 1em;
-        font-size: 1rem;
-        transition: 300ms;
-      }
-      &:hover {
-        &:after {
-          margin-left: 1.5em;
-        }
+        margin-left: 1.5em;
       }
     }
   }

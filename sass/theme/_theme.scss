@@ -12,6 +12,7 @@ body {
 }
 
 section {
+  z-index: 2;
   &.bg {
     &--none {
       background-color: #fff;
@@ -233,9 +234,9 @@ section {
   }
 
   &--page {
-    padding: 50px 0;
+    padding: 150px 0 60px 0;
     position: relative;
-
+    margin-bottom: 80px;
     & .pos-vertical-center {
       transform: translateY(-20%);
     }
@@ -489,6 +490,7 @@ section {
   height: 100%;
   position: absolute;
   pointer-events: none;
+  z-index: 1;
   top: 0;
   .line {
     background-image: linear-gradient(black 33%, rgba(255, 255, 255, 0) 0%);
@@ -526,6 +528,10 @@ section {
 
 li {
   margin-left: 1em;
+  padding-left: 1rem;
+}
+ul {
+  list-style-position: outside;
 }
 
 .contact__page {
@@ -569,4 +575,8 @@ li {
   &:hover {
     color: $primary;
   }
+}
+
+.container {
+  padding-left: 65px;
 }

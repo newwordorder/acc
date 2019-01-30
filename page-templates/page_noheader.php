@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Default Page
+ * Template Name: Page without header
  *
  *
  * @package understrap
@@ -10,8 +10,6 @@
 get_header();
 
 $headerType = get_field('image_or_video');
-
-$text = get_field('text');
 
 $image = get_field('background_image');
 $imageOverlay = get_field('image_overlay');
@@ -26,48 +24,45 @@ $invertColours = $backgroundImage['invert_colours'];
 $video = get_field('youtube_code');
 $fallbackImage = get_field('fallback_image');
 ?>
-<?php
-
-if (!empty($text)) : ?>
 
 <section id="sub-header"
 
-class="page-header page-header--page  <? if (empty($image)) : echo 'mb-0 pb-0';
-                                      endif; ?> "
+class="page-header page-header--page "
 >
 
-<div class="container">
-      <div class="row ">
-          <div class="  <? if (!empty($image)) : echo 'col-lg-6';
-                        else : echo 'col-lg-9';
-                        endif; ?> py-5">
-              <?php echo $text ?>
-          </div>
-      </div>
-  </div>
-  <div class="container-fluid image-container">
-  <div class="row flex-md-row-reverse">  
-  <?php
+<?php if ($headerType == 'image') : ?>
 
-  if (!empty($image)) :
+  <?php if (!empty($image)) :
 
-  // vars
+    // vars
   $url = $image['url'];
   $alt = $image['alt'];
 
   ?>
-      <div class="col-lg-5 pos-right header__image">
-
-      <div class="background-image-holder ">
-              
-                  <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
-                </div>
-                  </div>
-                  <?php endif; ?>
-
-  </div>
-</section>
+    <div class="background-image-holder">
+      <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
+    </div>
   <?php endif; ?>
+<?php endif; ?>
+<?php if ($headerType == 'video') : ?>
+
+  <div class="youtube-background" data-video-url="<?php echo $video ?>"></div>
+
+  <?php if (!empty($fallbackImage)) :
+
+    // vars
+  $url = $fallbackImage['url'];
+  $alt = $fallbackImage['alt'];
+
+  ?>
+    <div class="background-image-holder">
+      <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
+    </div>
+  <?php endif; ?>
+<?php endif; ?>
+
+</section>
+
 <div class="dotted-lines">
         <span class="line line--1"></span>
         <span class="line line--2"></span>

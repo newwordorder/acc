@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer.
  *
@@ -23,62 +24,62 @@
 								<img class="footer__logo" src="<?php bloginfo('template_directory'); ?>/img/acc_logo.svg" alt="Logo">
 							</a>
 						</div>
-						<div class="col-sm-10">
+						<div class="col-sm-8 offset-sm-1">
 						<div class="row">
 							<div class="col-md-3">
 								<a><h6>Our Business</h6></a>
 								<?php wp_nav_menu(
-									array(
-										'theme_location'  => 'business-menu',
-										'container_class' => 'footer-menu',
-										'container_id'    => '',
-										'menu_class'      => 'menu',
-										'fallback_cb'     => '',
-										'menu_id'         => 'footer__corporate',
-									)
-								); ?>
+								array(
+									'theme_location' => 'business-menu',
+									'container_class' => 'footer-menu',
+									'container_id' => '',
+									'menu_class' => 'menu',
+									'fallback_cb' => '',
+									'menu_id' => 'footer__corporate',
+								)
+							); ?>
 							</div>
 							<div class="col-md-3">
 							<a><h6>Our Capability</h6></a>
 
 								<?php wp_nav_menu(
-									array(
-										'theme_location'  => 'capability-menu',
-										'container_class' => 'footer-menu',
-										'container_id'    => '',
-										'menu_class'      => 'menu',
-										'fallback_cb'     => '',
-										'menu_id'         => 'footer__corporate',
-									)
-								); ?>
+								array(
+									'theme_location' => 'capability-menu',
+									'container_class' => 'footer-menu',
+									'container_id' => '',
+									'menu_class' => 'menu',
+									'fallback_cb' => '',
+									'menu_id' => 'footer__corporate',
+								)
+							); ?>
 							</div>
 							<div class="col-md-3">
 							<a><h6>Our people</h6></a>
 
 								<?php wp_nav_menu(
-									array(
-										'theme_location'  => 'people-menu',
-										'container_class' => 'footer-menu',
-										'container_id'    => '',
-										'menu_class'      => 'menu',
-										'fallback_cb'     => '',
-										'menu_id'         => 'footer__corporate',
-									)
-								); ?>
+								array(
+									'theme_location' => 'people-menu',
+									'container_class' => 'footer-menu',
+									'container_id' => '',
+									'menu_class' => 'menu',
+									'fallback_cb' => '',
+									'menu_id' => 'footer__corporate',
+								)
+							); ?>
 								</div>
 								<div class="col-md-3">
 								<a><h6>Contacts</h6></a>
 
 								<?php wp_nav_menu(
-									array(
-										'theme_location'  => 'contacts-menu',
-										'container_class' => 'footer-social',
-										'container_id'    => '',
-										'menu_class'      => 'menu',
-										'fallback_cb'     => '',
-										'menu_id'         => 'footer__social',
-									)
-								); ?>
+								array(
+									'theme_location' => 'contacts-menu',
+									'container_class' => 'footer-social',
+									'container_id' => '',
+									'menu_class' => 'menu',
+									'fallback_cb' => '',
+									'menu_id' => 'footer__social',
+								)
+							); ?>
 							</div>
 							</div>
 						</div>
