@@ -224,7 +224,7 @@ section {
 .page-header {
   &--home {
     padding: 0px 0;
-    height: 80vh;
+    height: 60vh;
     overflow: hidden;
     position: relative;
 
@@ -245,7 +245,7 @@ section {
   padding: 200px 0 100px;
 
   @include media-breakpoint-down(sm) {
-    padding: 150px 0 50px;
+    padding: 0px;
   }
 }
 
@@ -453,6 +453,9 @@ section {
 }
 
 .stripe {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
   position: fixed;
   left: 20px;
   height: 100%;
@@ -578,5 +581,7 @@ ul {
 }
 
 .container {
-  padding-left: 65px;
+  @media screen and (min-width: 796px) {
+    padding-left: 65px;
+  }
 }

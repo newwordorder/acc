@@ -115,10 +115,44 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/smooth-scroll.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/ytplayer.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/aos.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/js/swiper.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 
 <script>
 	AOS.init();
+
+		var mySwiper = new Swiper ('.swiper-container', {
+			// Optional parameters
+			direction: 'horizontal',
+			loop: true,
+			effect:'fade',
+			autoplay: {
+    			delay: 5000,
+			},
+			fadeEffect: {
+    		crossFade: true
+ 			 },
+			// If we need pagination
+			pagination: {
+			el: '.swiper-pagination',
+			},
+		})
+		mySwiper.on('slideChangeTransitionEnd', function () {
+			  var slide = document.querySelector('.swiper-slide-active');
+			  var menu = document.querySelector('#home-menu');
+			  var pagination = document.querySelector('#pagination');
+			  if(slide.classList.contains('light')){
+						menu.classList.add('light');
+						pagination.classList.add('light');
+
+				} else {
+					if (menu.classList.contains('light')) {
+						menu.classList.remove('light');
+						pagination.classList.remove('light');
+
+					}
+				}
+		});
 </script>
 
 </body>
