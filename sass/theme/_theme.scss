@@ -562,6 +562,35 @@ ul {
   width: 30%;
   padding: 8rem 1rem 0rem 1rem;
   background-color: #eee;
+  section {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .contact__left {
+    width: 50%;
+  }
+  .contact__right {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contact__page {
+    flex-direction: column;
+  }
+  .contact__left {
+    width: 100%;
+  }
+  .contact__right {
+    width: 100%;
+    padding: 1rem 1rem;
+    .space--lg {
+      padding: 1rem 0rem;
+    }
+  }
 }
 
 .wpcf7-form {
@@ -576,6 +605,15 @@ ul {
       -webkit-box-shadow: 0 0 0 0.1rem $accent;
       box-shadow: 1 0 0 0.1rem $accent;
     }
+  }
+  label {
+    span {
+      color: #8ed8f8;
+    }
+  }
+  & input[type='submit'] {
+    background-color: #e6e6e6;
+    border: 0;
   }
 }
 

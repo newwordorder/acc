@@ -18112,6 +18112,29 @@ ul {
   width: 30%;
   padding: 8rem 1rem 0rem 1rem;
   background-color: #eee; }
+  .contact__right section {
+    padding-left: 10px;
+    padding-right: 10px; }
+
+@media screen and (max-width: 1200px) {
+  .contact__left {
+    width: 50%; }
+  .contact__right {
+    width: 50%; } }
+
+@media screen and (max-width: 992px) {
+  .contact__page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .contact__left {
+    width: 100%; }
+  .contact__right {
+    width: 100%;
+    padding: 1rem 1rem; }
+    .contact__right .space--lg {
+      padding: 1rem 0rem; } }
 
 .wpcf7-form input[type='text'],
 .wpcf7-form input[type='email'],
@@ -18126,6 +18149,13 @@ ul {
   .wpcf7-form textarea:focus {
     -webkit-box-shadow: 0 0 0 0.1rem #ffdc00;
     box-shadow: 1 0 0 0.1rem #ffdc00; }
+
+.wpcf7-form label span {
+  color: #8ed8f8; }
+
+.wpcf7-form input[type='submit'] {
+  background-color: #e6e6e6;
+  border: 0; }
 
 .accordian-toggle {
   display: -webkit-box;
