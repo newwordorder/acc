@@ -2,13 +2,20 @@
   background: $primary;
   padding: 100px 0;
   position: relative;
+  @media screen and (max-width: 768px) {
+    padding: 20px 0px;
+  }
 
   .row {
     margin-bottom: 30px;
-  }
-
-  .col-* {
-    margin-bottom: 30px;
+    .col-sm-2,
+    .col-md-3,
+    .col-sm-8 {
+      @media screen and (max-width: 768px) {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
   }
 
   h1,
@@ -49,6 +56,9 @@
 
 .footer__logo {
   width: 150px;
+  @media screen and (max-width: 768px) {
+    width: 100px;
+  }
 }
 
 .footer-stripe {

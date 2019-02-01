@@ -44,7 +44,7 @@
 
       @include media-breakpoint-down(sm) {
         margin-left: 0px;
-        padding: 20px 0px;
+        padding: 10px 0px;
       }
 
       &:hover {
@@ -83,6 +83,11 @@
 
   .container-fluid {
     padding: 0 4rem;
+    @media screen and (max-width: 768px) {
+      padding: 0rem 0;
+      background-color: #fff;
+      margin-top: 0;
+    }
   }
 }
 
@@ -103,10 +108,14 @@
     padding: 15px;
     border-bottom: none;
     flex-direction: column;
+    margin: 0;
   }
 
   &--sub {
     margin: 2rem 0 0 0;
+    @media screen and (max-width: 768px) {
+      margin: 0rem;
+    }
 
     .header__navigation {
       &:before {
@@ -178,7 +187,6 @@
 }
 
 #header.-white {
-  padding: 10px 15px;
   color: #2f353e;
   background: #fff !important;
   box-shadow: 0 0 2px rgba(6, 8, 8, 0.15);
@@ -191,17 +199,22 @@
 
   .header__navigation {
     .active > .nav-link {
-      color: rgba($dark, 1);
     }
   }
 
   a {
-    color: rgba($dark, 0.7);
     transition: 0.2s;
     padding: 0;
 
     &:hover {
-      color: rgba($dark, 1);
+    }
+  }
+
+  #home-menu {
+    &.light {
+      * {
+        color: $primary !important;
+      }
     }
   }
 }
@@ -276,7 +289,6 @@
   text-transform: uppercase;
   flex-direction: column;
   font-size: 1.25rem;
-  mix-blend-mode: exclusion;
   * {
     color: $primary;
   }
@@ -295,6 +307,11 @@
   font-family: $font-sans;
   color: $primary;
   padding: 0px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
   li {
     margin-left: 1rem !important;
     padding-left: 0rem;
@@ -332,4 +349,20 @@
 .image-container {
   position: absolute;
   top: 120px;
+}
+
+@media screen and (max-width: 992px) {
+  .header__image {
+    height: 285px;
+    border-left: 0px solid #8ed8f8;
+  }
+
+  .image-container {
+    position: relative;
+    top: 0px;
+  }
+}
+
+.tooltip {
+  display: none;
 }

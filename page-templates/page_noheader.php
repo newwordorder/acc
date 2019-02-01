@@ -63,15 +63,6 @@ class="page-header page-header--page "
 
 </section>
 
-<div class="dotted-lines">
-        <span class="line line--1"></span>
-        <span class="line line--2"></span>
-        <span class="line line--3"></span>
-        <span class="line line--4"></span>
-        <span class="line line--5"></span>
-        <span class="line line--6"></span>
-</div>
-
 <?php get_template_part('page-templates/blocks'); ?>
 
 <?php get_footer();

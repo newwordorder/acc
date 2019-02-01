@@ -17,10 +17,16 @@
   }
 
   margin: 15px 0;
+
   margin-left: -18rem;
 
   @media screen and (max-width: 798px) {
     margin: 0px;
+    padding: 0px;
+
+    &:nth-of-type(n) {
+      margin-top: 0rem;
+    }
     &:nth-of-type(3) {
       margin-top: 0rem;
       h4,
@@ -37,6 +43,11 @@
     margin-bottom: 0;
     font-size: 2.5rem;
     text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+      font-size: 1.875rem;
+      line-height: 1rem;
+      padding: 15px;
+    }
   }
 
   p {
@@ -46,6 +57,9 @@
     color: $primary;
     padding: 0.8em 0rem;
     letter-spacing: 1px;
+    @media screen and (max-width: 768px) {
+      padding: 0px 15px;
+    }
 
     &:after {
       content: '\f061';
@@ -70,6 +84,7 @@
   &__icon {
     margin: 1rem 0px;
     border-bottom: 6px solid $primary;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
   }
 
   &__icon {

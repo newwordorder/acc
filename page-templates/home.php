@@ -75,6 +75,8 @@ array_push($imageArray, $image['url']);
 endwhile;
 ?>
 
+<div class="dotted-lines--svg">
+</div>
 
 <script>
 

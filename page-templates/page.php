@@ -36,15 +36,6 @@ class="page-header page-header--page  <? if (empty($image)) : echo 'mb-0 pb-0';
                                       endif; ?> "
 >
 
-<div class="container">
-      <div class="row ">
-          <div class="  <? if (!empty($image)) : echo 'col-lg-6';
-                        else : echo 'col-lg-9';
-                        endif; ?> py-5">
-              <?php echo $text ?>
-          </div>
-      </div>
-  </div>
   <div class="container-fluid image-container">
   <div class="row flex-md-row-reverse">  
   <?php
@@ -66,16 +57,20 @@ class="page-header page-header--page  <? if (empty($image)) : echo 'mb-0 pb-0';
                   <?php endif; ?>
 
   </div>
+  </div>
+
+<div class="container">
+      <div class="row ">
+          <div class="  <? if (!empty($image)) : echo 'col-lg-6';
+                        else : echo 'col-lg-9';
+                        endif; ?> py-5">
+              <?php echo $text ?>
+          </div>
+      </div>
+  </div>
 </section>
   <?php endif; ?>
-<div class="dotted-lines">
-        <span class="line line--1"></span>
-        <span class="line line--2"></span>
-        <span class="line line--3"></span>
-        <span class="line line--4"></span>
-        <span class="line line--5"></span>
-        <span class="line line--6"></span>
-</div>
+
 
 <?php get_template_part('page-templates/blocks'); ?>
 
