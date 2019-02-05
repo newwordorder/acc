@@ -18,7 +18,7 @@
   backface-visibility: hidden;
   transition: 0.4s;
 
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     margin-left: 0px;
     padding: 0px;
     height: 60px;
@@ -42,7 +42,7 @@
       transition: 0.2s;
       padding: 0;
 
-      @include media-breakpoint-down(sm) {
+      @media screen and (max-width: 768px) {
         margin-left: 0px;
         padding: 10px 0px;
       }
@@ -61,13 +61,13 @@
 
   .logo--white {
     display: block;
-    @include media-breakpoint-down(sm) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
   }
   .logo--black {
     display: none;
-    @include media-breakpoint-down(sm) {
+    @media screen and (max-width: 768px) {
       display: block;
     }
   }
@@ -94,7 +94,7 @@
 .header__logo {
   display: block;
   width: 150px;
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     width: 100px;
   }
 }
@@ -104,7 +104,7 @@
   justify-content: space-between;
   margin: 0 2rem;
 
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     padding: 15px;
     border-bottom: none;
     flex-direction: column;
@@ -145,7 +145,7 @@
   align-items: center;
   justify-content: flex-start;
 
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     justify-content: flex-start;
   }
 }
@@ -155,7 +155,7 @@
   margin: 0;
   list-style: none;
   display: flex;
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     display: none;
     flex-direction: column;
     &.is-active {
@@ -193,7 +193,7 @@
   transition-delay: 0s;
   transition-duration: 0.4s;
 
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     padding: 0px;
   }
 
@@ -270,7 +270,7 @@
       top: 5px;
     }
   }
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     display: block;
   }
 

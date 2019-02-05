@@ -16937,6 +16937,34 @@ footer.footer-7 {
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'Font Awesome 5 Pro';
+  src: url("../fonts/font-awesome/fa-regular-400.eot");
+  src: url("../fonts/font-awesome/fa-regular-400.woff") format("woff"), url("../fonts/font-awesome/fa-regular-400.ttf") format("truetype"), url("../fonts/font-awesome/fa-regular-400.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Font Awesome 5 Light';
+  src: url("../fonts/font-awesome/fa-light-300.eot");
+  src: url("../fonts/font-awesome/fa-light-300.woff") format("woff"), url("../fonts/font-awesome/fa-light-300.ttf") format("truetype"), url("../fonts/font-awesome/fa-light-300.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Font Awesome 5 Solid';
+  src: url("../fonts/font-awesome/fa-solid-900.eot");
+  src: url("../fonts/font-awesome/fa-solid-900.woff") format("woff"), url("../fonts/font-awesome/fa-solid-900.ttf") format("truetype"), url("../fonts/font-awesome/fa-solid-900.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Font Awesome 5 Brands';
+  src: url("../fonts/font-awesome/fa-brands-400.eot");
+  src: url("../fonts/font-awesome/fa-brands-400.woff") format("woff"), url("../fonts/font-awesome/fa-brands-400.ttf") format("truetype"), url("../fonts/font-awesome/fa-brands-400.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 html {
   font-size: 1rem; }
 
@@ -17073,7 +17101,7 @@ hr.short {
   backface-visibility: hidden;
   -webkit-transition: 0.4s;
   transition: 0.4s; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     #header {
       margin-left: 0px;
       padding: 0px;
@@ -17090,7 +17118,7 @@ hr.short {
     -webkit-transition: 0.2s;
     transition: 0.2s;
     padding: 0; }
-    @media (max-width: 767.98px) {
+    @media screen and (max-width: 768px) {
       #header .header__navigation a {
         margin-left: 0px;
         padding: 10px 0px; } }
@@ -17102,13 +17130,13 @@ hr.short {
 
 #header .logo--white {
   display: block; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     #header .logo--white {
       display: none; } }
 
 #header .logo--black {
   display: none; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     #header .logo--black {
       display: block; } }
 
@@ -17129,7 +17157,7 @@ hr.short {
 .header__logo {
   display: block;
   width: 150px; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     .header__logo {
       width: 100px; } }
 
@@ -17141,7 +17169,7 @@ hr.short {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 0 2rem; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     .header__inner {
       padding: 15px;
       border-bottom: none;
@@ -17182,7 +17210,7 @@ hr.short {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     .header__navigation {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
@@ -17195,7 +17223,7 @@ hr.short {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     .header-nav {
       display: none;
       -webkit-box-orient: vertical;
@@ -17236,7 +17264,7 @@ hr.short {
           transition-delay: 0s;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     #header.-white {
       padding: 0px; } }
   #header.-white a {
@@ -17296,7 +17324,7 @@ hr.short {
     .toggle-menu .line:nth-of-type(2) {
       width: 15px;
       top: 5px; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     .toggle-menu {
       display: block; } }
   .toggle-menu.is-active .line {
@@ -17459,7 +17487,7 @@ hr.short {
       border-radius: 0; }
     .feature-column--boxed .rounded {
       border-radius: 0 !important; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     .feature-column {
       margin-bottom: 30px; } }
   .feature-column__image, .feature-column__icon {
@@ -17524,7 +17552,7 @@ hr.short {
       transition: 300ms; }
     .overlapping-column p:hover:after {
       margin-left: 1.5em; }
-  @media (max-width: 767.98px) {
+  @media screen and (max-width: 768px) {
     .overlapping-column {
       margin-bottom: 30px; } }
   .overlapping-column__image, .overlapping-column__icon {
@@ -18195,7 +18223,7 @@ ul {
   position: relative; }
   .panel-heading a:after {
     content: '\f056';
-    font-family: 'Font Awesome 5 Pro';
+    font-family: 'Font Awesome 5 Light';
     position: absolute;
     top: 50%;
     right: 0%;
@@ -18204,7 +18232,7 @@ ul {
     opacity: 0.6; }
   .panel-heading a.collapsed:after {
     content: '\f055';
-    font-family: 'Font Awesome 5 Pro';
+    font-family: 'Font Awesome 5 Light';
     position: absolute;
     top: 50%;
     right: 0%;

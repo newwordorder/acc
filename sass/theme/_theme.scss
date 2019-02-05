@@ -657,7 +657,7 @@ ul {
   a {
     &:after {
       content: '\f056';
-      font-family: 'Font Awesome 5 Pro';
+      font-family: 'Font Awesome 5 Light';
       position: absolute;
       top: 50%;
       right: 0%;
@@ -667,7 +667,7 @@ ul {
     &.collapsed {
       &:after {
         content: '\f055';
-        font-family: 'Font Awesome 5 Pro';
+        font-family: 'Font Awesome 5 Light';
         position: absolute;
         top: 50%;
         right: 0%;

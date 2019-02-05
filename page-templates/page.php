@@ -63,7 +63,7 @@ class="page-header page-header--page  <? if (empty($image)) : echo 'mb-0 pb-0';
       <div class="row ">
           <div class="  <? if (!empty($image)) : echo 'col-lg-6';
                         else : echo 'col-lg-9';
-                        endif; ?> py-5">
+                        endif; ?> pt-5">
               <?php echo $text ?>
           </div>
       </div>
