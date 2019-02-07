@@ -153,6 +153,96 @@
 					}
 				}
 		});
+
+		jQuery(document).ready(function($){
+
+			$('.timeline__dates').on('click', function(e){
+				if(!$(e.target).hasClass('active')){
+					$('.timeline__dates').removeClass('active');
+					$('.timeline__section').removeClass('active');
+					 console.log(e.target);
+
+					var container_id = '#' + e.target.id.split('_')[0] + '_container--' + e.target.id.split('--')[1];
+
+					console.log(container_id);
+
+					$(e.target).addClass('active');
+					$(container_id).addClass('active')
+
+				}
+			})
+
+			$('#timeline').on('click', function(e){
+				if(!$(e.target).hasClass('active')){
+					$('.selector').removeClass('active');
+					$(e.target).addClass('active');
+					$('#awards--container').removeClass('active');
+					$('#timeline--container').addClass('active');
+					$('#timeline_container--1').addClass('active')
+					$('#timeline_daterange--1').addClass('active')
+
+				}
+			})
+
+			$('#awards').on('click', function(e){
+				if(!$(e.target).hasClass('active')){
+					$('.selector').removeClass('active');
+					$(e.target).addClass('active');
+					$('#timeline--container').removeClass('active');
+					$('#awards--container').addClass('active');
+					$('#awards_container--1').addClass('active')
+					$('#awards_daterange--1').addClass('active')
+
+
+				}
+			})
+
+			$('.properties__daterange').on('click', function(e){
+				if(!$(e.target).hasClass('active')){
+					$('.properties__daterange').removeClass('active');
+					$('.properties__row').removeClass('active');
+
+					var row_id = '#row--' + e.target.id.split('--')[1];
+
+					$(e.target).addClass('active');
+					$(row_id).addClass('active')
+					changeLocation(e.target.id.split('--')[1], 1);
+
+				}
+			})
+
+			$('.location__list').children().on('click', function(e){
+				if(!$(e.target).hasClass('active')){
+						changeLocation(e.target.id.split('__')[1], e.target.id.split('--')[1]);
+				}
+			})
+
+			$()
+
+			function changeLocation( rowid, id){
+				console.log('row = ' + rowid + ' id = ' + id);
+				$('.enclosing').children().each(function(){
+					$(this).removeClass('active');
+				})
+				$('.location__list').children().each(function(){
+					$(this).removeClass('active');
+				})
+
+				$('.details__box').removeClass('active');
+				$('#row__' + rowid + '__details--' + id).addClass('active');
+				$('#row__' + rowid + '__name--' + id).addClass('active');
+				$('#row__' + rowid + '__g--' + id).addClass('active');
+			}
+
+
+			$('.enclosing').children().on('click',function(e){
+				var node = e.target.parentNode.parentNode;
+				if(!$(node).hasClass('active')){
+					changeLocation( node.id.split('__')[1], node.id.split('--')[1]);
+				}
+  			})
+ 
+		});
 </script>
 
 </body>

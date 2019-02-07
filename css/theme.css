@@ -17578,13 +17578,22 @@ hr.short {
     background-color: #002a54;
     padding: 1rem;
     margin-bottom: 0; }
+  .feature-tile__header h3 {
+    line-height: 1; }
   .feature-tile__content {
-    color: #002a54;
     background-color: #fff;
     padding: 1rem;
     height: 100%; }
     .feature-tile__content li {
-      margin-left: 2rem; }
+      margin-left: 2rem;
+      color: #002a54; }
+    .feature-tile__content p {
+      color: #002a54 !important; }
+  .feature-tile__image {
+    background-color: #fff;
+    width: 100%;
+    position: relative;
+    height: 18rem; }
 
 .people-tile {
   position: relative;
@@ -17703,6 +17712,281 @@ hr.short {
     font-family: "barlow_semi_condensed_lightRg", sans-serif; }
   .swiper-container .slide__subtitle {
     font-size: 2rem; }
+
+.timeline__selector {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer; }
+  .timeline__selector .selector {
+    width: 50%;
+    padding: 0.5rem 1rem;
+    background-color: #e3e3e3;
+    position: relative; }
+    .timeline__selector .selector * {
+      pointer-events: none; }
+    .timeline__selector .selector.active#timeline:after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      bottom: 0px;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 15px solid #fff; }
+    .timeline__selector .selector.active#awards:after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      bottom: 0px;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 15px solid #fff; }
+    .timeline__selector .selector h3 {
+      color: #002a54 !important;
+      font-size: 2.25rem; }
+      .timeline__selector .selector h3 svg {
+        margin: 0px 0.5rem; }
+    .timeline__selector .selector:first-of-type {
+      text-align: right;
+      background-color: #002a54; }
+      .timeline__selector .selector:first-of-type h3 {
+        color: #fff !important; }
+
+.timeline__daterange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #fff;
+  position: relative; }
+  .timeline__daterange div {
+    padding: 1rem 4rem;
+    cursor: pointer; }
+    .timeline__daterange div h5 {
+      color: #002a54 !important;
+      margin-bottom: 0;
+      pointer-events: none; }
+    .timeline__daterange div.active {
+      border-bottom: 3px solid #002a54; }
+
+.timeline__section {
+  display: none; }
+  .timeline__section .col-md-4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+  .timeline__section.active {
+    display: block; }
+
+.shelf {
+  display: none; }
+  .shelf.active {
+    display: block; }
+
+.properties__row {
+  display: none; }
+  .properties__row.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.properties__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-bottom: 1px solid #002a54; }
+
+.properties__selector {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  cursor: pointer; }
+  .properties__selector .selector {
+    width: 50%;
+    padding: 0.5rem 1rem;
+    background-color: #e3e3e3;
+    position: relative; }
+    .properties__selector .selector * {
+      pointer-events: none; }
+    .properties__selector .selector.active#properties:after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      bottom: 0px;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 15px solid #fff; }
+    .properties__selector .selector.active#awards:after {
+      content: '';
+      position: absolute;
+      left: 20px;
+      bottom: 0px;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 15px solid #fff; }
+    .properties__selector .selector h3 {
+      color: #002a54 !important;
+      font-size: 2.25rem; }
+      .properties__selector .selector h3 svg {
+        margin: 0px 0.5rem; }
+    .properties__selector .selector:first-of-type {
+      text-align: right;
+      background-color: #002a54; }
+      .properties__selector .selector:first-of-type h3 {
+        color: #fff !important; }
+
+.properties__daterange {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative; }
+  .properties__daterange .properties__dates {
+    pointer-events: none;
+    padding: 0rem 2rem;
+    cursor: pointer; }
+    .properties__daterange .properties__dates h5 {
+      color: #002a54 !important;
+      margin-bottom: 0;
+      pointer-events: none; }
+  .properties__daterange.active {
+    border-bottom: 3px solid #002a54; }
+
+.properties__section {
+  display: none; }
+  .properties__section .col-md-4 {
+    margin-top: 2rem;
+    margin-bottom: 2rem; }
+  .properties__section.active {
+    display: block; }
+
+.properties * {
+  color: #002a54 !important; }
+
+.shelf {
+  display: none; }
+  .shelf.active {
+    display: block; }
+
+.svg--container {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+svg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+.location__list {
+  background-color: #fff;
+  width: 100%; }
+  .location__list--box {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .location__list li {
+    cursor: pointer;
+    list-style-type: none;
+    opacity: 0.6;
+    padding: 1.75rem 0rem;
+    padding-left: 2rem;
+    margin-left: 0;
+    position: relative; }
+    .location__list li h5 {
+      margin-bottom: 0;
+      pointer-events: none; }
+    .location__list li.active {
+      opacity: 1; }
+      .location__list li.active:before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 30px;
+        -webkit-transform: translateY(-15%);
+                transform: translateY(-15%);
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 12.5px solid #8ed8f8; }
+
+.details__box {
+  background-color: #fff;
+  padding: 2rem;
+  border-top: 4px solid #8ed8f8;
+  display: none;
+  opacity: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms; }
+  .details__box.active {
+    display: block;
+    opacity: 1; }
+
+.properties svg .group {
+  cursor: pointer; }
+
+.properties svg .active .path2 {
+  fill: transparent;
+  stroke-width: 2px; }
+
+.properties svg path {
+  fill: #ffdc00;
+  stroke-width: 0px;
+  -webkit-transition: 300ms;
+  transition: 300ms; }
 
 body {
   background: url("../img/lines.svg");

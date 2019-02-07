@@ -18,9 +18,6 @@ body {
 section {
   z-index: 2;
   &.bg {
-    &--none {
-    }
-
     &--light {
       background-color: $light;
     }
