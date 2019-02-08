@@ -1259,7 +1259,7 @@ body:not(.dropdowns--hover) .dropdown.dropdown--hover:hover > .dropdown__contain
     position: absolute;
   }
 }
-/**! 12. Form Elements **/
+/**! 12. Form Elements
 form {
   max-width: 100%;
 }
@@ -1309,14 +1309,12 @@ select::-webkit-input-placeholder {
 input[type]:-moz-placeholder,
 textarea:-moz-placeholder,
 select:-moz-placeholder {
-  /* Firefox 18- */
   color: #b3b3b3;
   font-size: 1.14285714em;
 }
 input[type]::-moz-placeholder,
 textarea::-moz-placeholder,
 select::-moz-placeholder {
-  /* Firefox 19+ */
   color: #b3b3b3;
   font-size: 1.14285714em;
 }
@@ -7058,7 +7056,7 @@ span + .typed-text.h1 {
     margin-bottom: 0;
   }
 }
-/*! -- Stack Forms -- */
+/*! -- Stack Forms 
 .bg--dark input,
 .imagebg:not(.image--light) input,
 .bg--dark textarea,
@@ -7547,7 +7545,7 @@ label {
   left: 0;
   border-right: 1px solid #ececec;
 }
-/*! -- Stack Subscribe Forms -- */
+/*! -- Stack Subscribe Forms
 .subscribe-form-1 h3 {
   margin-bottom: 0.52em;
 }
@@ -7574,7 +7572,7 @@ label {
     margin-top: 1.85714286em;
   }
 }
-/*! -- Stack Elaborate Forms -- */
+/*! -- Stack Elaborate Forms 
 @media all and (max-width: 767px) {
   .elaborate-form-1 .pos-vertical-center {
     padding-left: 15px;
@@ -7591,14 +7589,14 @@ label {
     margin-right: -15px;
   }
 }
-/* Stack Boxed Forms */
+/* Stack Boxed Forms 
 .boxed-form h4 {
   margin-bottom: 0.684210526315789em;
 }
 .boxed-form:last-child {
   margin-bottom: 0;
 }
-/* Stack Datepicker Form */
+/* Stack Datepicker Form
 .datepicker {
   cursor: pointer;
 }
@@ -7695,7 +7693,7 @@ label {
 .picker button:not(:hover) {
   opacity: .5;
 }
-/* Stack Horizontal Forms */
+/* Stack Horizontal Forms
 .form-horizontal {
   display: flex;
 }
