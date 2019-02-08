@@ -16,7 +16,7 @@ if (get_row_layout() == 'timeline_and_awards') :
                         <?php $date_range = get_sub_field('date-range') ?>
                         <div id="timeline_daterange--<?php echo $id; ?>" class="timeline__dates  <?php if ($id == 1) : echo 'active';
                                                                                                 endif; ?>">
-                            <h5><?php echo $date_range; ?></h5>
+                            <h6><?php echo $date_range; ?></h6>
                         </div>
                     <?php 
                     $id++;
@@ -74,7 +74,7 @@ if (get_row_layout() == 'timeline_and_awards') :
                         <?php $date_range = get_sub_field('date-range') ?>
                         <div id="awards_daterange--<?php echo $id; ?>" class="timeline__dates  <?php if ($id == 1) : echo 'active';
                                                                                                 endif; ?>">
-                            <h5><?php echo $date_range; ?></h5>
+                            <h6><?php echo $date_range; ?></h6>
                         </div>
                     <?php 
                     $id++;

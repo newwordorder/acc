@@ -32,7 +32,7 @@ if (!empty($text)) : ?>
 
 <section id="sub-header"
 
-class="page-header page-header--page  <? if (empty($image)) : echo 'mb-0 pb-0';
+class="page-header page-header--page  <? if (empty($image)) : echo ' pb-0';
                                       endif; ?> "
 >
 

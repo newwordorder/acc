@@ -11,6 +11,11 @@
       background-color: #e3e3e3;
       position: relative;
       * {
+        svg {
+          @media screen and(max-width:425px) {
+            display: none;
+          }
+        }
         pointer-events: none;
       }
       &.active {
@@ -65,10 +70,13 @@
     justify-content: center;
     background-color: #fff;
     position: relative;
+    @media screen and (max-width: 425px) {
+      flex-direction: column;
+    }
     div {
       padding: 1rem 4rem;
       cursor: pointer;
-      h5 {
+      h6 {
         color: $primary !important;
         margin-bottom: 0;
         pointer-events: none;

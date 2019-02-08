@@ -17371,6 +17371,9 @@ hr.short {
         height: 2px;
         background-color: #ffdc00;
         mix-blend-mode: normal; }
+        @media screen and (max-width: 768px) {
+          #page-menu .menu-item.active:after, #page-menu .menu-item.current-page-ancestor:after {
+            display: none; } }
 
 .header__image {
   height: 750px;
@@ -17654,11 +17657,14 @@ hr.short {
   width: 100%;
   height: 100%; }
   .swiper-container .swiper-slide {
-    height: 100%;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     padding: 200px 0px; }
+    @media screen and (max-width: 768px) {
+      .swiper-container .swiper-slide {
+        padding: 50px 0px; } }
     .swiper-container .swiper-slide .slide-title {
       -webkit-transition: 300ms;
       transition: 300ms;
@@ -17674,6 +17680,9 @@ hr.short {
         bottom: -5rem;
         -webkit-transition: 300ms;
         transition: 300ms; }
+        @media screen and (max-width: 768px) {
+          .swiper-container .swiper-slide .slide-title:after {
+            bottom: -3rem; } }
       .swiper-container .swiper-slide .slide-title:hover:after {
         content: '\f178';
         font-family: 'Font Awesome 5 Pro';
@@ -17735,6 +17744,9 @@ hr.short {
     position: relative; }
     .timeline__selector .selector * {
       pointer-events: none; }
+      @media screen and (max-width: 425px) {
+        .timeline__selector .selector * svg {
+          display: none; } }
     .timeline__selector .selector.active#timeline:after {
       content: '';
       position: absolute;
@@ -17783,10 +17795,16 @@ hr.short {
           justify-content: center;
   background-color: #fff;
   position: relative; }
+  @media screen and (max-width: 425px) {
+    .timeline__daterange {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
   .timeline__daterange div {
     padding: 1rem 4rem;
     cursor: pointer; }
-    .timeline__daterange div h5 {
+    .timeline__daterange div h6 {
       color: #002a54 !important;
       margin-bottom: 0;
       pointer-events: none; }
