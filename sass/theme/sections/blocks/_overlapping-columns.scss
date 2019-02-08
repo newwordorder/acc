@@ -10,7 +10,7 @@
   &:nth-of-type(3) {
     margin-top: 16rem;
     h4,
-    .buttons {
+    p {
       width: 40%;
       margin-left: 60%;
     }
@@ -19,6 +19,23 @@
   margin: 15px 0;
 
   margin-left: -18rem;
+
+  @media screen and (max-width: 798px) {
+    margin: 0px;
+    padding: 0px;
+
+    &:nth-of-type(n) {
+      margin-top: 0rem;
+    }
+    &:nth-of-type(3) {
+      margin-top: 0rem;
+      h4,
+      p {
+        width: 0%;
+        margin-left: 0%;
+      }
+    }
+  }
   h4 {
     font-family: $font-sans-light;
     white-space: pre-line;
@@ -26,28 +43,40 @@
     margin-bottom: 0;
     font-size: 2.5rem;
     text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+      font-size: 1.875rem;
+      line-height: 1rem;
+      padding: 15px;
+    }
   }
 
-  .buttons {
-    margin: 0;
-    a {
+  p {
+    font-weight: 700;
+    font-family: $font-sans-semibold;
+    text-transform: uppercase;
+    color: $primary;
+    padding: 0.8em 0rem;
+    letter-spacing: 1px;
+    @media screen and (max-width: 768px) {
+      padding: 0px 15px;
+    }
+
+    &:after {
+      content: '\f061';
+      font-family: 'Font Awesome 5 Pro';
+      color: $accent;
+      margin-left: 1em;
+      font-size: 1rem;
+      transition: 300ms;
+    }
+    &:hover {
       &:after {
-        content: '\f061';
-        font-family: 'Font Awesome 5 Pro';
-        color: $accent;
-        margin-left: 1em;
-        font-size: 1rem;
-        transition: 300ms;
-      }
-      &:hover {
-        &:after {
-          margin-left: 1.5em;
-        }
+        margin-left: 1.5em;
       }
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     margin-bottom: 30px;
   }
 
@@ -55,6 +84,7 @@
   &__icon {
     margin: 1rem 0px;
     border-bottom: 6px solid $primary;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.15);
   }
 
   &__icon {

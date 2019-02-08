@@ -31,29 +31,35 @@ class="page-header page-header--home"
 data-overlay="<?php echo $imageOverlay ?>"
 >
 
-<?php $slides = get_field('texts'); ?>
-      <div class='slider'>
-        <div class="slide__container">
-        <?php while (have_rows('texts')) : the_row();
+
+<?php $slides = get_field('slides'); ?>
+      <div class='swiper-container'>
+        <div class="swiper-wrapper">
+        <?php while (have_rows('slides')) : the_row();
         $text = get_sub_field('text');
         $color = get_sub_field('text_color');
+        $image = get_sub_field('image');
 
         ?>
-          <div class="slide <?php echo $color; ?>">
-            <div class="container">
-              <div class="row">
-                <div class="col-md-10">
+          <div class="swiper-slide <?php echo $color; ?>">
+          <div class="background-image-holder">
+            <img src="<?php echo $image['url'] ?>" />
+          </div>
+          <div class="container">
               <?php echo $text; ?>
-                   </div>
-                </div>
-            </div>
+          </div>
           </div>
           <? endwhile; ?>
         </div>
-                                                                                              </div>
+        <!-- If we need pagination -->
+      <div id="pagination" class="swiper-pagination"></div>
+
+    </div>
 
 
 </section>
+
+
 
 
 <?php get_template_part('page-templates/blocks'); ?>
@@ -69,6 +75,8 @@ array_push($imageArray, $image['url']);
 endwhile;
 ?>
 
+<div class="dotted-lines--svg">
+</div>
 
 <script>
 

@@ -21,14 +21,13 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @media screen and (max-width: 768px) {
     margin-bottom: 30px;
   }
 
   &__image,
   &__icon {
     margin-bottom: 30px;
-    border-bottom: 6px solid $primary;
   }
 
   &__icon {

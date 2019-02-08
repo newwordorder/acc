@@ -13,8 +13,8 @@
       <a href="<?php if ($linkType == "page") : echo $pageUrl;
               endif; ?><?php if ($linkType == "url") : echo $url;
                       endif; ?>" class="btn btn--<?php echo $buttonStyle ?>"><?php if ($buttonStyle == "outline") : echo '<span>';
-                                                                                                                            endif; ?><?php echo $buttonText ?><?php if ($buttonStyle == "outline") : echo '</span>';
-                                                                                                                                                                                                        endif; ?> </a>
+                                                                            endif; ?><?php echo $buttonText ?><?php if ($buttonStyle == "outline") : echo '</span>';
+                                                                                                                                                              endif; ?> </a>
 
     <?php endwhile; ?>
   </div>

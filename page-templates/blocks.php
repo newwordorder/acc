@@ -30,6 +30,8 @@ if (have_rows('blocks')) {
         get_template_part('page-templates/blocks/projects');
         get_template_part('page-templates/blocks/accordian');
         get_template_part('page-templates/blocks/overlapping-columns');
+        get_template_part('page-templates/blocks/timelineandawards');
+        get_template_part('page-templates/blocks/properties');
 
       }
 

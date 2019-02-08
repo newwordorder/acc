@@ -31,7 +31,7 @@ function faq_shortcode($atts, $content = null)
         $out .= '<h3 class="panel-title">';
         $out .= $question;
         $out .= '</h3>';
-        $out .= '<i class="far fa-plus js-rotate-if-collapsed"></i></a>';
+        $out .= '</a>';
         $out .= '';
         $out .= '</div>';
         $out .= '<div id="' . $id . '" class="panel-collapse collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">';
@@ -50,7 +50,7 @@ function faq_shortcode($atts, $content = null)
         $out .= '<h3 class="panel-title">';
         $out .= $question;
         $out .= '</h3>';
-        $out .= '<i class="far fa-plus js-rotate-if-collapsed"></i></a>';
+        $out .= '</a>';
         $out .= '';
         $out .= '</div>';
         $out .= '<div id="' . $id . '" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">';
