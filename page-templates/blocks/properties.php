@@ -41,6 +41,17 @@ if (get_row_layout() == 'properties') :
                     endwhile; ?>
                 <?php endif; ?>
             </ul>
+            <select class="location__select " id="location__select--<?php echo $row; ?>">
+            <?php if (have_rows('locations')) : ?>
+                <?php $itemID = 1; ?>
+                    <?php while (have_rows('locations')) : the_row(); ?>
+                        <?php $title = get_sub_field('title'); ?>
+                                <option class="<?php if ($itemID == 1) : echo 'active';
+                                                endif; ?>" id="row__<?php echo $row; ?>__name--<?php echo $itemID; ?>"><h5><?php echo $title; ?></h5></option>
+                    <?php $itemID++;
+                    endwhile; ?>
+                <?php endif; ?>
+                </select>
                 </div>
         
             </div>
@@ -70,7 +81,7 @@ if (get_row_layout() == 'properties') :
             </svg>
          </div>
     </div>
-    <div class="col-md-4 align-items-center  d-flex">
+    <div class="col-md-4  d-flex">
         <?php $detailsID = 1; ?>
         <?php while (have_rows('locations')) : the_row(); ?>
 

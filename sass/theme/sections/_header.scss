@@ -115,6 +115,7 @@
     margin: 2rem 0 0 0;
     @media screen and (max-width: 768px) {
       margin: 0rem;
+      padding: 0;
     }
 
     .header__navigation {
@@ -126,6 +127,9 @@
         left: 0%;
         top: -0rem;
         background-color: rgba(0, 0, 0, 0.1);
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
       &:after {
         content: '';
@@ -135,6 +139,9 @@
         left: 0%;
         background-color: rgba(0, 0, 0, 0.1);
         bottom: -0rem;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
       }
     }
   }
@@ -204,7 +211,9 @@
 
   a {
     transition: 0.2s;
-    padding: 0;
+
+    @media screen and (max-width: 768px) {
+    }
 
     &:hover {
     }
@@ -295,6 +304,9 @@
   &.light {
     * {
       color: #fff !important;
+      @media screen and (max-width: 768px) {
+        color: $primary !important;
+      }
     }
   }
 }

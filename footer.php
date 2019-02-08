@@ -211,6 +211,13 @@
 				}
 			})
 
+			$('.location__select').on('change', function(e){
+				var id = $(e.target).find(":selected")[0].id;
+				changeLocation(id.split('__')[1], id.split('--')[1]);
+			})
+
+
+
 			$('.location__list').children().on('click', function(e){
 				if(!$(e.target).hasClass('active')){
 						changeLocation(e.target.id.split('__')[1], e.target.id.split('--')[1]);
@@ -232,6 +239,10 @@
 				$('#row__' + rowid + '__details--' + id).addClass('active');
 				$('#row__' + rowid + '__name--' + id).addClass('active');
 				$('#row__' + rowid + '__g--' + id).addClass('active');
+
+				var text  = $('#row__' + rowid + '__name--' + id)[0].textContent;
+				console.log($('.location__select'));
+				$('.location__select').val(text);
 			}
 
 
