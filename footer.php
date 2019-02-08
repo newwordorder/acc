@@ -68,12 +68,12 @@
 							); ?>
 								</div>
 								<div class="col-md-3">
-								<a><h6></h6></a>
+								<a><h6>Contacts</h6></a>
 
 								<?php wp_nav_menu(
 								array(
-									'theme_location' => 'contacts-menu',
-									'container_class' => 'footer-social',
+									'theme_location' => 'contact-menu',
+									'container_class' => 'footer-menu',
 									'container_id' => '',
 									'menu_class' => 'menu',
 									'fallback_cb' => '',
@@ -86,10 +86,10 @@
 				</div>
 				<div class="row">
 						<div class="col-sm-3">
-							<p class="footer-text">© Copyright 2018 All Rights Reserved</p>
+							<p class="footer-text">© Copyright <?php echo date('Y'); ?> All Rights Reserved</p>
 						</div>
 						<div class="col-sm-4" >
-							<p class="footer-text">Disclaimer | <a href="<?php echo get_home_url(); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php echo get_home_url(); ?>/terms-and-conditions">Terms & Conditions</a> </p>
+							<p class="footer-text">Disclaimer   |   <a href="<?php echo get_home_url(); ?>/privacy-policy">Privacy Policy</a>   |   <a href="<?php echo get_home_url(); ?>/terms-and-conditions">Terms & Conditions</a> </p>
 
 						</div>
 						<div class="col-sm-4">

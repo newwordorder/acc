@@ -28,6 +28,10 @@ if (get_row_layout() == 'properties') :
         <?php while (have_rows('properties_properties')) : the_row(); ?>
             <div class="row pt-5 properties__row <?php if ($row == 1) : echo 'active';
                                                 endif; ?> " id="row--<?php echo $row; ?>">
+                                                <div class="col-md-12 pb-4">
+                                                    <?php $property_desc = get_sub_field('property_type_desc');
+                                                    echo $property_desc; ?>
+                                                </div>
                 <div class="col-md-4">
                 <div class='location__list--box'>
            <ul class="location__list " id="location__list--<?php echo $row; ?>">
@@ -55,7 +59,7 @@ if (get_row_layout() == 'properties') :
                 </div>
         
             </div>
-          <div class="col-md-4 align-items-center  d-flex">
+          <div class="col-md-4 ">
               <div class="svg--container">
           <svg viewBox="0 0 565 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Artwork" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

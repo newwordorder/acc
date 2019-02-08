@@ -235,7 +235,7 @@ section {
   &--page {
     padding: 150px 0 60px 0;
     position: relative;
-    margin-bottom: 80px;
+    overflow: hidden;
     @media screen and (max-width: 992px) {
       margin-bottom: 0;
     }
@@ -541,7 +541,7 @@ section {
 
 li {
   margin-left: 1em;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 ul {
   list-style-position: outside;
