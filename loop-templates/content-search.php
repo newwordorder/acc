@@ -30,11 +30,6 @@
 		<?php the_excerpt(); ?>
 
 	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
+<hr>
 
 </article><!-- #post-## -->

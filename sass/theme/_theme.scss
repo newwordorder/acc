@@ -678,3 +678,48 @@ ul {
     line-height: 1;
   }
 }
+
+.search-form {
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $light;
+  z-index: 1040;
+  transition: 0.2s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    width: 80%;
+    max-width: 800px;
+  }
+}
+
+.search-form.is-open {
+  height: 100%;
+}
+
+.search-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 3px;
+  background: $primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: $white;
+  transition: 0.2s;
+
+  &:hover {
+    background: darken($primary, 10%);
+  }
+}

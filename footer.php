@@ -100,7 +100,27 @@
 
 </footer>
 
+<div class="search-form ">
+	<span class="search-close">
+		<i class="fas fa-times"></i>
+	</span>
+	<?php get_template_part( 'searchform' ); ?>
+</div>
 
+<script>
+(function($) {
+	$(".search-btn a").click(function () {
+		$(".search-form").toggleClass("is-open");
+	});
+	
+})( jQuery );
+
+(function($) {
+	$(".search-close").click(function () {
+		$(".search-form").removeClass("is-open");
+	});
+})( jQuery );	
+</script>
 
 
 
