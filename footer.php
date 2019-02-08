@@ -68,7 +68,7 @@
 							); ?>
 								</div>
 								<div class="col-md-3">
-								<a><h6>Contacts</h6></a>
+								<a><h6></h6></a>
 
 								<?php wp_nav_menu(
 								array(
@@ -89,7 +89,7 @@
 							<p class="footer-text">© Copyright 2018 All Rights Reserved</p>
 						</div>
 						<div class="col-sm-4" >
-							<p class="footer-text">Disclaimer | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> </p>
+							<p class="footer-text">Disclaimer | <a href="<?php echo get_home_url(); ?>/privacy-policy">Privacy Policy</a> | <a href="<?php echo get_home_url(); ?>/terms-and-conditions">Terms & Conditions</a> </p>
 
 						</div>
 						<div class="col-sm-4">
@@ -104,7 +104,7 @@
 	<span class="search-close">
 		<i class="fas fa-times"></i>
 	</span>
-	<?php get_template_part( 'searchform' ); ?>
+	<?php get_template_part('searchform'); ?>
 </div>
 
 <script>
@@ -247,7 +247,6 @@
 			$()
 
 			function changeLocation( rowid, id){
-				console.log('row = ' + rowid + ' id = ' + id);
 				$('.enclosing').children().each(function(){
 					$(this).removeClass('active');
 				})
