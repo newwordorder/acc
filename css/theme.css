@@ -17482,7 +17482,10 @@ hr.short {
   -webkit-transition: 0.2s;
   transition: 0.2s;
   padding: 0;
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  line-height: 1.25rem; }
   .footer-menu .menu a:hover {
     color: #343a40; }
 
@@ -18029,6 +18032,18 @@ svg {
         top: 30px;
         -webkit-transform: translateY(-1.5rem);
                 transform: translateY(-1.5rem);
+        width: 0;
+        height: 0;
+        border-top: 15px solid transparent;
+        border-bottom: 15px solid transparent;
+        border-left: 12.5px solid #8ed8f8; }
+      .location__list li.active:first-of-type:before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 30px;
+        -webkit-transform: translateY(-0.5rem);
+                transform: translateY(-0.5rem);
         width: 0;
         height: 0;
         border-top: 15px solid transparent;

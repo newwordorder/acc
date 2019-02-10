@@ -53,8 +53,7 @@ if (!empty($text)) : ?>
   </div>
   </div>
 
-<div class="container  <?php if (!empty($image)) : echo 'pt-10 pb-3';
-                      endif; ?>">
+<div class="container pt-10 pb-3">
       <div class="row ">
           <div class="  <? if (!empty($image)) : echo 'col-lg-6';
                         else : echo 'col-lg-9';
