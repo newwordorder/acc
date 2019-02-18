@@ -17123,17 +17123,17 @@ hr.short {
     #header .logo--black {
       display: block; } }
 
-#header.-white .logo--white {
-  display: none; }
-
-#header.-white .logo--black {
-  display: block; }
-
-#header.-white #home-menu {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+#header.-white {
+  padding-top: 0; }
+  #header.-white .logo--white {
+    display: none; }
+  #header.-white .logo--black {
+    display: block; }
+  #header.-white #home-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
 
 #header .container-fluid {
   padding: 0 4rem; }
@@ -17533,7 +17533,7 @@ hr.short {
     .overlapping-column:nth-of-type(3) p {
       width: 40%;
       margin-left: 60%; }
-  @media screen and (max-width: 798px) {
+  @media screen and (max-width: 992px) {
     .overlapping-column {
       margin: 0px;
       padding: 0px; }
@@ -17543,7 +17543,7 @@ hr.short {
         margin-top: 0rem; }
         .overlapping-column:nth-of-type(3) h4,
         .overlapping-column:nth-of-type(3) p {
-          width: 0%;
+          width: 100%;
           margin-left: 0%; } }
   .overlapping-column h4 {
     font-family: "barlow_semi_condensed_lightRg", sans-serif;
@@ -17577,7 +17577,7 @@ hr.short {
       transition: 300ms; }
     .overlapping-column p:hover:after {
       margin-left: 1.5em; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     .overlapping-column {
       margin-bottom: 30px; } }
   .overlapping-column__image, .overlapping-column__icon {
