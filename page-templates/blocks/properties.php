@@ -32,9 +32,9 @@ if (get_row_layout() == 'properties') :
                                                     <?php $property_desc = get_sub_field('property_type_desc');
                                                     echo $property_desc; ?>
                                                 </div>
-                <div class="col-md-4">
-                <div class='location__list--box'>
-           <ul class="location__list " id="location__list--<?php echo $row; ?>">
+                <div class="col-md-4 outer-container">
+                <div class='location__list--box inner-container'>
+           <ul class="location__list element" id="location__list--<?php echo $row; ?>">
             <?php if (have_rows('locations')) : ?>
                 <?php $itemID = 1; ?>
                     <?php while (have_rows('locations')) : the_row(); ?>
