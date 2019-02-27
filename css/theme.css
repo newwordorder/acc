@@ -17618,8 +17618,6 @@ hr.short {
     background-color: #fff;
     width: 100%;
     position: relative;
-    height: 100%;
-    min-height: 12rem;
     max-height: 12rem; }
 
 .people-tile {
@@ -18070,6 +18068,34 @@ svg {
 
 .properties svg .group {
   cursor: pointer; }
+
+.properties svg .hidden {
+  opacity: 0; }
+
+.properties svg .active .duplicate-1 {
+  opacity: 1; }
+
+.properties svg .duplicate-1 {
+  opacity: 0; }
+
+.properties svg .duplicate-2 {
+  opacity: 0; }
+
+.properties svg .duplicate_bg {
+  opacity: 1; }
+  .properties svg .duplicate_bg path {
+    fill: #ffdc00;
+    stroke-width: 0px;
+    -webkit-transition: 300ms;
+    transition: 300ms; }
+    .properties svg .duplicate_bg path.feedlot {
+      fill: #8dd7f7; }
+
+.properties svg .duplicate_bg.active {
+  opacity: 0; }
+
+.properties svg .active {
+  opacity: 1; }
 
 .properties svg .active .path2 {
   fill: transparent;

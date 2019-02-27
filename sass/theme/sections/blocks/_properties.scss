@@ -213,6 +213,44 @@ svg {
       * {
       }
     }
+    .hidden {
+      opacity: 0;
+    }
+
+    .active {
+      .duplicate-1 {
+        opacity: 1;
+      }
+    }
+
+    .duplicate-1 {
+      opacity: 0;
+    }
+
+    .duplicate-2 {
+      opacity: 0;
+    }
+
+    .duplicate_bg {
+      opacity: 1;
+      path {
+        fill: #ffdc00;
+        stroke-width: 0px;
+        transition: 300ms;
+        &.feedlot {
+          fill: #8dd7f7;
+        }
+      }
+    }
+
+    .duplicate_bg.active {
+      opacity: 0;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
     .active {
       .path2 {
         fill: transparent;
