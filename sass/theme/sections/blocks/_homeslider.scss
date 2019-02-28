@@ -105,3 +105,9 @@
   left: 0;
   width: 100%;
 }
+
+.modal-instance {
+  position: relative;
+  z-index: 2;
+  margin: auto;
+}

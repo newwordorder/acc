@@ -189,7 +189,6 @@
             if (!$(e.target).hasClass('active')) {
                 $('.timeline__dates').removeClass('active');
                 $('.timeline__section').removeClass('active');
-                console.log(e.target);
 
                 var container_id = '#' + e.target.id.split('_')[0] + '_container--' + e.target.id.split('--')[1];
 
@@ -256,6 +255,7 @@
         $()
 
         function changeLocation(rowid, id) {
+            console.log(rowid, id);
             $('.enclosing').children().each(function() {
                 $(this).removeClass('active');
             })
@@ -266,10 +266,16 @@
             $('.details__box').removeClass('active');
             $('#row__' + rowid + '__details--' + id).addClass('active');
             $('#row__' + rowid + '__name--' + id).addClass('active');
-            $('#row__' + rowid + '__g--' + id).addClass('active');
-
+            if (rowid == 1 && id == 8) {
+                $('#row__' + rowid + '__g--' + 7).addClass('active');
+            }
+            if (rowid == 1 && id == 11) {
+                $('#row__' + rowid + '__g--' + 16).addClass('active');
+            } else {
+                $('#row__' + rowid + '__g--' + id).addClass('active');
+            }
             var text = $('#row__' + rowid + '__name--' + id)[0].textContent;
-            console.log($('.location__select'));
+            console.log(text);
             $('.location__select').val(text);
         }
 

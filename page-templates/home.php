@@ -25,34 +25,40 @@ $video = get_field('youtube_code');
 $fallbackImage = get_field('fallback_image');
 ?>
 
-<section id="sub-header"
-
-class="page-header page-header--home"
-data-overlay="<?php echo $imageOverlay ?>"
->
+<section id="sub-header" class="page-header page-header--home" data-overlay="<?php echo $imageOverlay ?>">
 
 
-<?php $slides = get_field('slides'); ?>
-      <div class='swiper-container'>
+    <?php $slides = get_field('slides'); ?>
+    <div class='swiper-container'>
         <div class="swiper-wrapper">
-        <?php while (have_rows('slides')) : the_row();
-        $text = get_sub_field('text');
-        $color = get_sub_field('text_color');
-        $image = get_sub_field('image');
+            <?php while (have_rows('slides')): the_row();
+              $text = get_sub_field('text');
+              $color = get_sub_field('text_color');
+              $image = get_sub_field('image');
 
-        ?>
-          <div class="swiper-slide <?php echo $color; ?>">
-          <div class="background-image-holder">
-            <img src="<?php echo $image['url'] ?>" />
-          </div>
-          <div class="container">
-              <?php echo $text; ?>
-          </div>
-          </div>
-          <? endwhile; ?>
+              ?>
+            <div class="swiper-slide <?php echo $color; ?>">
+                <div class="background-image-holder">
+                    <img src="<?php echo $image['url'] ?>" />
+                </div>
+                <div class=" container modal-instance">
+                    <div class="modal-trigger">
+                        <?php echo $text; ?>
+                    </div>
+                    <div class="modal-container">
+                        <div class="modal-content bg-dark" data-width="60%" data-height="60%">
+                            <iframe></iframe>
+                        </div>
+                        <!--end of modal-content-->
+                    </div>
+                    <!--end of modal-container-->
+                </div>
+                <!--end of modal instance-->
+            </div>
+            <? endwhile; ?>
         </div>
         <!-- If we need pagination -->
-      <div id="pagination" class="swiper-pagination"></div>
+        <div id="pagination" class="swiper-pagination"></div>
 
     </div>
 
@@ -69,9 +75,9 @@ data-overlay="<?php echo $imageOverlay ?>"
 $images = get_field('images');
 $imageArray = array();
 
-while (have_rows('images')) : the_row();
-$image = get_sub_field('image');
-array_push($imageArray, $image['url']);
+while (have_rows('images')): the_row();
+  $image = get_sub_field('image');
+  array_push($imageArray, $image['url']);
 endwhile;
 ?>
 
@@ -79,22 +85,21 @@ endwhile;
 </div>
 
 <script>
+    var displacement = ['<?php bloginfo('
+        template_directory '); ?>' + '/img/20.jpg'
+    ];
 
-  var displacement = ['<?php bloginfo('template_directory'); ?>' + '/img/20.jpg'];
+    var images = <?php echo json_encode($imageArray); ?>;
 
-  var images = <?php echo json_encode($imageArray); ?>;
-
-  var slide1 = new sliderEffect({
-      parent: document.querySelector('.slider'),
-      intensity: 0.2,
-      images: images,
-      displacements: displacement,
-      slides: document.querySelectorAll('.slide'),
-      hover: false,
-      line: document.querySelector('.line')
-  });
-
-
+    var slide1 = new sliderEffect({
+        parent: document.querySelector('.slider'),
+        intensity: 0.2,
+        images: images,
+        displacements: displacement,
+        slides: document.querySelectorAll('.slide'),
+        hover: false,
+        line: document.querySelector('.line')
+    });
 </script>
 
 

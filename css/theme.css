@@ -17769,6 +17769,11 @@ hr.short {
   left: 0;
   width: 100%; }
 
+.modal-instance {
+  position: relative;
+  z-index: 2;
+  margin: auto; }
+
 .timeline__selector {
   width: 100%;
   display: -webkit-box;
@@ -18633,8 +18638,6 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   color: #002a54; }
-  .accordian-toggle.collapsed {
-    color: #e6e6e6; }
   .accordian-toggle:hover {
     color: #002a54; }
 
