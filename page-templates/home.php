@@ -32,28 +32,31 @@ $fallbackImage = get_field('fallback_image');
     <div class='swiper-container'>
         <div class="swiper-wrapper">
             <?php while (have_rows('slides')): the_row();
-              $text = get_sub_field('text');
-              $color = get_sub_field('text_color');
-              $image = get_sub_field('image');
+                $text = get_sub_field('text');
+                $color = get_sub_field('text_color');
+                $image = get_sub_field('image');
 
-              ?>
+                ?>
             <div class="swiper-slide <?php echo $color; ?>">
                 <div class="background-image-holder">
                     <img src="<?php echo $image['url'] ?>" />
                 </div>
-                <div class=" container modal-instance">
-                    <div class="modal-trigger">
-                        <?php echo $text; ?>
-                    </div>
-                    <div class="modal-container">
-                        <div class="modal-content bg-dark" data-width="60%" data-height="60%">
-                            <iframe></iframe>
+                <div class="container">
+                    <?php echo $text; ?>
+                    <div class="modal-instance">
+                        <a class="btn btn--link modal-trigger" href="#">
+                            Watch Video
+                        </a>
+                        <div class="modal-container">
+                            <div class="modal-content bg-dark" data-width="60%" data-height="60%">
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/KNN1MbDDkCA?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <!--end of modal-content-->
                         </div>
-                        <!--end of modal-content-->
+                        <!--end of modal-container-->
                     </div>
-                    <!--end of modal-container-->
                 </div>
-                <!--end of modal instance-->
+
             </div>
             <? endwhile; ?>
         </div>
@@ -76,8 +79,8 @@ $images = get_field('images');
 $imageArray = array();
 
 while (have_rows('images')): the_row();
-  $image = get_sub_field('image');
-  array_push($imageArray, $image['url']);
+    $image = get_sub_field('image');
+    array_push($imageArray, $image['url']);
 endwhile;
 ?>
 
