@@ -83,7 +83,7 @@
       }
 
       &.active {
-        border-bottom: 3px solid $primary;
+        box-shadow: inset 0px -3px 0px 0px #002a54;
       }
     }
   }

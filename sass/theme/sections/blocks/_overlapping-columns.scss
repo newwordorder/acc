@@ -20,7 +20,7 @@
 
   margin-left: -18rem;
 
-  @media screen and (max-width: 798px) {
+  @media screen and (max-width: 992px) {
     margin: 0px;
     padding: 0px;
 
@@ -31,7 +31,7 @@
       margin-top: 0rem;
       h4,
       p {
-        width: 0%;
+        width: 100%;
         margin-left: 0%;
       }
     }
@@ -76,7 +76,7 @@
     }
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 992px) {
     margin-bottom: 30px;
   }
 

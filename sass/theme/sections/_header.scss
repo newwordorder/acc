@@ -25,6 +25,7 @@
   }
 
   .header__navigation {
+    padding-right: 2rem;
     .active > .nav-link {
       color: rgba($primary, 1);
       font-family: $font-sans-semibold;
@@ -32,8 +33,10 @@
 
     li {
       margin-left: 1rem;
-      :first-of-type {
-        margin-left: 0px;
+      @media screen and (min-width: 768px) {
+        :first-of-type {
+          margin-left: 0px;
+        }
       }
     }
 
@@ -73,11 +76,15 @@
   }
 
   &.-white {
+    padding-top: 0;
     .logo--white {
       display: none;
     }
     .logo--black {
       display: block;
+    }
+    #home-menu {
+      flex-direction: row;
     }
   }
 
@@ -162,6 +169,8 @@
   margin: 0;
   list-style: none;
   display: flex;
+  align-items: baseline;
+
   @media screen and (max-width: 768px) {
     display: none;
     flex-direction: column;
@@ -319,7 +328,7 @@
   font-family: $font-sans;
   color: $primary;
   padding: 0px;
-
+  align-items: baseline;
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -380,4 +389,25 @@
 
 .tooltip {
   display: none;
+}
+
+#sub-menu {
+  :first-child {
+    @media screen and (min-width: 768px) {
+      margin-left: 0 !important;
+      padding-left: 0;
+    }
+  }
+  li {
+    @media screen and (max-width: 768px) {
+      padding-left: 0;
+    }
+  }
+}
+
+.pt-10 {
+  padding-top: 8rem;
+  @media screen and (max-width: 768px) {
+    padding-top: 0rem;
+  }
 }

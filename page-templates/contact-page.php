@@ -27,7 +27,7 @@ $fallbackImage = get_field('fallback_image');
 
 <div class="container">
   <div class="contact__page">
-    <div class="contact__left">
+    <div class="contact__left pt-10">
       <?php get_template_part('page-templates/blocks'); ?>
     </div>
     <div class="contact__right">
