@@ -17727,6 +17727,9 @@ hr.short {
         position: absolute;
         left: 1rem;
         bottom: -5rem; }
+        @media screen and (max-width: 768px) {
+          .swiper-container .swiper-slide .slide-title:hover:after {
+            bottom: -3rem; } }
     .swiper-container .swiper-slide.light * {
       color: #fff !important; }
   .swiper-container .swiper-pagination-bullet {
@@ -17776,6 +17779,9 @@ hr.short {
   margin-left: 4rem;
   position: absolute !important;
   bottom: -2.8rem; }
+  @media screen and (max-width: 450px) {
+    .modal-instance {
+      bottom: -1.8rem; } }
 
 .modal-trigger {
   font-size: 1.5rem !important; }
